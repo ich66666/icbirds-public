@@ -1,0 +1,48 @@
+{
+  "canisters": {
+    "hello": {
+      "main": "src/hello/main.mo",
+      "type": "motoko"
+    },
+    "icbirds": {
+      "build": "src/hello/build.sh",
+      "candid": "src/hello/icbirds/icbirds.did",
+      "wasm": "src/hello/target/wasm32-unknown-unknown/release/icbirds.",
+      "type": "custom"
+    },
+    "icbirds_storage": {
+      "main" : "src/hello/motoko/storage.mo",
+      "type" : "motoko"
+    },
+    "hello_assets": {
+      "dependencies": [
+        "icbirds"
+      ],
+      "frontend": {
+        "entrypoint": "src/index.html"
+      },
+      "source": [
+        "src/hello_assets/assets",
+        "dist/hello_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    },
+    "ic" : {
+      "providers" : "internet"
+    }
+  },
+  "version": 1
+}

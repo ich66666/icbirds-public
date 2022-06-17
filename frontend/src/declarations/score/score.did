@@ -1,0 +1,12 @@
+type Score = 
+ service {
+   getCallerPrincipal: () -> (principal);
+   get_all_score: () -> (vec record {
+                               principal;
+                               nat;
+                             }) query;
+   get_max_score: (principal) -> (nat) query;
+   setFrontEnd: (text) -> ();
+   set_new_score: (principal, nat) -> ();
+ };
+service : (principal) -> Score

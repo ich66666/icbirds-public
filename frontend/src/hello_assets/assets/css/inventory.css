@@ -1,0 +1,147 @@
+.inventory {
+    margin: 10px;
+    order: 1;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.inventory span {
+    font-family: ICBirdsFont2;
+    color: black;
+}
+
+.inventory button {
+    z-index: 1;
+    position: relative;
+    font-size: inherit;
+    /* display: none; */
+    font-family: inherit;
+    color: white;
+    /* padding: 0.5em 1em; */
+    outline: none;
+    border: none;
+    /* background-color: rgb(51, 51, 51); */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.inventory button::after {
+    content: '';
+    z-index: -1;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    position: absolute;
+    top: -50%;
+    bottom: -50%;
+    width: 2.75em;
+    transform: translate3d(-450%, 0, 0) rotate(35deg);
+}
+
+.inventory button:hover::after {
+    transition: transform 0.45s ease-in-out;
+    transform: translate3d(300%, 0, 0) rotate(35deg);
+}
+
+.list {
+    flex: 1 1 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    height: 140px;
+    margin: 1em;
+    margin-bottom: 1.2em;
+}
+
+.list button {
+    height: 120px;
+    margin: 5px;
+}
+
+.listpipe {
+    flex: 1 1 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    margin: 5px;
+    height: 180px;
+}
+
+.listpipe button {
+    height: 140px;
+    margin: 5px;
+}
+
+.listbackground {
+    flex: 1 1 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    margin: 5px;
+    height: 180px;
+}
+
+.listbackground button {
+    height: 140px;
+    margin: 5px;
+}
+
+.pipe {
+    width: 80px;
+    height: 120px;
+    overflow: hidden;
+}
+
+.pipe img {
+    width: 80px !important;
+    height: 800px;
+    margin: -450px 0 0 0;
+}
+
+.background {
+    width: 120px;
+    height: 120px;
+
+}
+
+.background img {
+    width: 120px;
+    height: 120px;
+}
+
+.item-inventory-bird {
+    background-color: transparent;
+    border-style: none;
+}
+
+.item-inventory-bird-selected {
+    background-color: transparent;
+    border-color: #2B6EFE !important;
+    border-style: solid !important;
+    box-shadow: 0 0 6px #2B6EFE !important;
+    animation: linear 1s ease-in-out infinite alternate;
+}
+
+
+.item-inventory-pipe {
+    background-color: transparent;
+    border-style: none;
+}
+
+.item-inventory-pipe-selected {
+    background-color: transparent;
+    border-color: #2B6EFE !important;
+    border-style: solid !important;
+    box-shadow: 0 0 6px #2B6EFE !important;
+}
+
+.item-inventory-background {
+    background-color: transparent;
+    border-style: none;
+}
+
+.item-inventory-background-selected {
+    background-color: transparent;
+    border-color: #2B6EFE !important;
+    border-style: solid !important;
+    box-shadow: 0 0 6px #2B6EFE !important;
+}
