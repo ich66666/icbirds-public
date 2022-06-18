@@ -3,6 +3,9 @@
 Play with you IC Birds nfts on our decentralized games. Collect tokens and improve your birds skills to beat your best score and grind the leaderboard !
 This repo contains the source code of IC Birds.
 
+![](https://repository-images.githubusercontent.com/504576532/1d9125df-e234-4d0e-ade7-482fa987b6b8)
+
+
 ## Installation
 
 To launch the frontend, navigate to the frontend folder and execute :
